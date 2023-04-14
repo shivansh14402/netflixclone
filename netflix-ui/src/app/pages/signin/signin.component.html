@@ -1,0 +1,44 @@
+<app-backgroung-image></app-backgroung-image>
+
+<div class="rootComponent">
+
+    
+
+    <img src="../../../assets/logo.png" class="img" (click)="imgClickHandler()" />
+
+        <div class="form">
+            <p class="title">Sign In</p>
+
+            <form [formGroup]="signupForm">
+                <div class="inputbox">
+                    <label for="email">Email address</label>
+                    <input name="email" type="email" class="input" formControlName="emailOrPhone" id="emailInput" />
+                </div>
+                <div class="inputbox">
+                    <label for="password">Password</label>
+                    <input name="password" type="password" formControlName="password" class="input"
+                        [style]="inputStyle" />
+
+                </div>
+
+                <input type="submit" class="button" value="Sign In" />
+
+                <div class="remember">
+
+                    <div>
+                        <input type="checkbox" name="remember" />
+                        <label for="remember" style="margin-left: 0.5rem;">Remember me</label>
+                    </div>
+
+                    <a>Need help?</a>
+                </div>
+
+                <div class="declaration">
+
+                    New to Netflix? <span (click)="imgClickHandler()">Sign Up now</span>.
+                    <p>This page is protected by google reCAPTCHA to
+                        ensure you're not a bot</p>
+                </div>
+            </form>
+        </div>
+</div>
